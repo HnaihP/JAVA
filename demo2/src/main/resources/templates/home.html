@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout}">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<body>
+<div layout:fragment="content" class="container body-content">
+    <div class="row">
+        <h1>Hello</h1>
+        <ul>
+            <li th:each="course : ${listCourse}" th:text="${course.startDate} + ' ' + ${course.lectureName} + ' ' + ${course.place}"></li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>
